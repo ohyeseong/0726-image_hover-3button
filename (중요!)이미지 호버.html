@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: "Anton", sans-serif;
+            background-color: rgb(0, 11, 36);
+            overflow-x: hidden;
+        }
+
+        .section_main{
+            padding: 100px 0;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .section_row{
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+
+        }
+
+        .section_col{
+            flex: 0 0 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .section{
+            width: 100%;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section_in{
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .section_in img{
+            width: 100%;
+            transition: all 0.3s;
+            height: auto;
+            display: block;
+        }
+
+        .section_col:hover .section_in img{
+            transform: rotate(-3deg) scale(1.1);
+        }
+
+        .hover_text{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            /* display: flex; */
+            align-items: center;
+            justify-content: center;
+            display: none;
+            mix-blend-mode: difference;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .hover_text h2{
+            font-size: 10vw;
+            color: white;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.3s ease-out;
+        }
+
+        .section_row:hover .section_col{
+            opacity: 0.1;
+        }
+
+        .section_row .section_col:hover{
+            opacity: 1;
+        }
+
+        .section_col:hover + .hover_text h2{
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .section_col:hover + .hover_text{
+            display: flex;
+        }
+    </style>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script lang="java">
+        $(document).ready(function(){
+
+        })// fin
+    </script>
+</head>
+<body>
+    <div class="section_main">
+        <div class="section_row">
+            <div class="section_col">
+                <div class="section">
+                    <div class="section_in">
+                        <img src="img/img1.jpg" alt="img1">
+                    </div>
+                </div>
+            </div><!-- section_col -->
+
+            <div class="hover_text">
+                <h2>Male Goofy Face</h2>
+            </div>
+
+            <div class="section_col">
+                <div class="section">
+                    <div class="section_in">
+                        <img src="img/img2.jpg" alt="img2">
+                    </div>
+                </div>
+            </div><!-- section_col -->
+
+            <div class="hover_text">
+                <h2>Toy Pig</h2>
+            </div>
+
+            <div class="section_col">
+                <div class="section">
+                    <div class="section_in">
+                        <img src="img/img3.jpg" alt="img3">
+                    </div>
+                </div>
+            </div><!-- section_col -->
+
+            <div class="hover_text">
+                <h2>Shy Portrait</h2>
+            </div>
+
+            <div class="section_col">
+                <div class="section">
+                    <div class="section_in">
+                        <img src="img/img4.jpg" alt="img4">
+                    </div>
+                </div>
+            </div><!-- section_col -->
+
+            <div class="hover_text">
+                <h2>Skateboard Face</h2>
+            </div>
+
+            <div class="section_col">
+                <div class="section">
+                    <div class="section_in">
+                        <img src="img/img5.jpg" alt="img5">
+                    </div>
+                </div>
+            </div><!-- section_col -->
+
+            <div class="hover_text">
+                <h2>Mirror Reflection</h2>
+            </div>
+
+            <div class="section_col">
+                <div class="section">
+                    <div class="section_in">
+                        <img src="img/img6.jpg" alt="img6">
+                    </div>
+                </div>
+            </div><!-- section_col -->
+
+            <div class="hover_text">
+                <h2>Funny Bunny</h2>
+            </div>
+        </div><!-- section_row -->
+    </div>
+</body>
+</html>
